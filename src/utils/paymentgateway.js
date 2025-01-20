@@ -12,7 +12,7 @@ export const handleStripeCheckout = async (data) => {
   const stripe = await stripePromise;
 
   try {
-    const response = await fetch('https://neuro-nest-backend.onrender.com/paymentCheckout', {
+    const response = await fetch('https://neuro-nest-api.onrender.com/paymentCheckout', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
