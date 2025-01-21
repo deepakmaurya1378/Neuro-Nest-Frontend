@@ -96,7 +96,7 @@ const authSlice = createSlice({
       state.isAuthenticated = true;
 
       localStorage.setItem('authState', JSON.stringify(state));
-      Cookies.set('token', action.payload.token, { expires: 7 });
+      Cookies.set('token', action.payload.token, { expires: '1h'  });
     },
     logout(state) {
       state.user = null;
