@@ -35,17 +35,17 @@ function App() {
           <Routes>
             <Route path="/" element={<LoginPage />} />
             <Route path="/register" element={<RegisterPage />} />
-            <Route path="/dashboard" element={<ProtectedRoute> <Dashboard /> </ProtectedRoute>} />
-            <Route path="/success" element={<ProtectedRoute> <SuccessPage /> </ProtectedRoute>} />
-            <Route path="/failure" element={<ProtectedRoute> <FailurePage /> </ProtectedRoute>} />
-            <Route path="/therapist" element={ <ProtectedRoute> <TherapistList /> </ProtectedRoute>}/>
-            <Route path="/emotion/:emotionId" element={ <ProtectedRoute> <EmotionDetail/> </ProtectedRoute>}/>
-            <Route path="/ClientNotes/:sessionId" element={ <ProtectedRoute> <EmotionalDetailForTherapist/> </ProtectedRoute>} />
-            <Route path="/ChatSessions/:receiverId" element={ <ProtectedRoute> <ChatPage/> </ProtectedRoute>}/>
-            <Route path="/UserManual" element={ <ProtectedRoute> <UserManual/> </ProtectedRoute>} />
-            <Route path="/emotions"   element={ <ProtectedRoute> <EmotionPage /> </ProtectedRoute>}/>
-            <Route path="/emotionsofClient"   element={ <ProtectedRoute> <EmotionListForTherapist/> </ProtectedRoute>}/>
-            <Route path="/sessions"element={<ProtectedRoute> <SessionPage /> </ProtectedRoute>}/>
+            <Route path="/dashboard" element={ <Dashboard /> } />
+            <Route path="/success" element={ <SuccessPage /> } />
+            <Route path="/failure" element={ <FailurePage /> } />
+            <Route path="/therapist" element={ <TherapistList /> }/>
+            <Route path="/emotion/:emotionId" element={ <EmotionDetail/> }/>
+            <Route path="/ClientNotes/:sessionId" element={  <EmotionalDetailForTherapist/>} />
+            <Route path="/ChatSessions/:receiverId" element={<ChatPage/> }/>
+            <Route path="/UserManual" element={  <UserManual/> } />
+            <Route path="/emotions"   element={ <EmotionPage /> }/>
+            <Route path="/emotionsofClient"   element={  <EmotionListForTherapist/> }/>
+            <Route path="/sessions"element={ <SessionPage /> }/>
             <Route path="/messages"element={<ProtectedRoute><MessagePage /></ProtectedRoute>}/>
           </Routes>
         </div>
