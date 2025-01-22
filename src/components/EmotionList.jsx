@@ -88,27 +88,31 @@ const EmotionList = () => {
                 <div className="text-blue-600 text-xl font-semibold mt-2">{entry.emotion}</div>
                 <div className="text-sm text-gray-600">Intensity: {entry.intensity}</div>
 
-                <div className="mt-3 flex space-x-4">
-                  <Link to={`/emotion/${entry._id}`}>
-                    <button className="px-4 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700 transition">
-                      Open
-                    </button>
-                  </Link>
+                <div className="mt-3 flex flex-wrap gap-4">
+             
+              <Link to={`/emotion/${entry._id}`} className="w-full sm:w-auto">
+                <button className="w-full sm:w-auto px-4 py-2 rounded-md text-white transition shadow-md focus:outline-none focus:ring focus:ring-blue-300 bg-blue-500 hover:bg-blue-600">
+                  Open
+                </button>
+              </Link>
 
-                  <button
-                    onClick={() => handleDeleteEmotion(entry._id)}
-                    className="px-4 py-2 bg-red-600 text-white rounded-md hover:bg-red-700 transition"
-                  >
-                    Delete
-                  </button>
+              {/* Delete Button */}
+              <button
+                onClick={() => handleDeleteEmotion(entry._id)}
+                className="w-full sm:w-auto px-4 py-2 rounded-md text-white transition shadow-md focus:outline-none focus:ring focus:ring-red-300 bg-red-500 hover:bg-red-600"
+              >
+                Delete
+              </button>
 
-                  <button
-                    onClick={() => toggleDropdown(entry._id)}
-                    className="px-4 py-2 bg-green-600 text-white rounded-md hover:bg-green-700 transition"
-                  >
-                    Share to Therapist
-                  </button>
-                </div>
+              {/* Share Button */}
+              <button
+                onClick={() => toggleDropdown(entry._id)}
+                className="w-full sm:w-auto px-4 py-2 rounded-md text-white transition shadow-md focus:outline-none focus:ring focus:ring-green-300 bg-green-500 hover:bg-green-600"
+              >
+                Share 
+              </button>
+            </div>
+
 
                 {dropdownState[entry._id] && (
                   <div className="absolute left-0 mt-2 bg-white border rounded-md p-3 shadow-lg z-20 w-full max-w-xs">

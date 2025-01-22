@@ -15,7 +15,6 @@ function Navbar() {
       <nav className="bg-gray-700 p-4 shadow-md sticky top-0 z-10">
         <div className="max-w-5xl mx-auto flex justify-between items-center">
           <div className="text-blue-300 font-bold text-xl hover:text-blue-200">Neuro Nest</div>
-          <div className="text-white">Please log in to access the dashboard.</div>
           <Link
             to="/"
             className="text-white hover:text-blue-300 px-3 py-2 rounded-md text-lg"
