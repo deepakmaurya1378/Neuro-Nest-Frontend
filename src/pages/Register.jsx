@@ -166,7 +166,7 @@ const Register = () => {
                   className="w-full p-3 border-2 border-gray-300 rounded-md focus:outline-none focus:border-blue-500"
                   required
                 />
-                <p className="text-sm text-gray-600 mt-2">Upload your therapist license document (PDF, JPG, or PNG).</p>
+                <p className="text-sm text-gray-600 mt-2">Upload your  license document (PDF, JPG, or PNG).</p>
               </div>
             </div>
           )}
@@ -182,11 +182,14 @@ const Register = () => {
           </div>
         </form>
 
-        {pendingVerification && (
-          <div className="mt-4 p-4 bg-yellow-100 border-l-4 border-yellow-500 text-gray-700">
-            <p>Your registration has been successfully submitted! Please note that your verification process will take up to 12 hours. You will be contacted via phone and email for further steps.</p>
-          </div>
-        )}
+        {pendingVerification && role === "Therapist" && (
+            <div className="mt-4 p-4 bg-yellow-100 border-l-4 border-yellow-500 text-gray-700">
+              <p>
+                Your registration has been successfully submitted! Please note that your verification process will take up to 12 hours. You will be contacted via phone and email for further steps.
+              </p>
+            </div>
+          )}
+
 
         <div className="text-center mt-4">
           <p className="text-sm text-gray-600">
