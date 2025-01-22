@@ -42,7 +42,12 @@ const Register = () => {
       await dispatch(register(formData));
       setRegistrationStatus('success'); 
       setPendingVerification(true);
-      alert('Registration was successful! Your verification will take up to 24 hours.');
+      if (role === "Client") {
+        alert("Registration was successful!")
+      }
+      else {
+        alert('Registration was successful! Your verification will take up to 24 hours.');
+      }
     } catch (error) {
       console.error("Registration failed:", error);
       alert('Error during registration: ' + error.message);
@@ -179,7 +184,7 @@ const Register = () => {
 
         {pendingVerification && (
           <div className="mt-4 p-4 bg-yellow-100 border-l-4 border-yellow-500 text-gray-700">
-            <p>Your registration has been successfully submitted! Please note that your therapist verification process will take up to 24 hours. You will be contacted via phone and email for further steps.</p>
+            <p>Your registration has been successfully submitted! Please note that your verification process will take up to 12 hours. You will be contacted via phone and email for further steps.</p>
           </div>
         )}
 
